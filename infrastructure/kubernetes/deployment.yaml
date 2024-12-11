@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aintelligent-oddz
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aintelligent-oddz
+  template:
+    metadata:
+      labels:
+        app: aintelligent-oddz
+    spec:
+      containers:
+      - name: frontend
+        image: aintelligent-oddz-frontend:latest
+        ports:
+        - containerPort: 3000
+      - name: backend
+        image: aintelligent-oddz-backend:latest
+        ports:
+        - containerPort: 8000
+
