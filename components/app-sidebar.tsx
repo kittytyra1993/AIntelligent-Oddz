@@ -11,20 +11,25 @@ import {
   Frame,
   GalleryVerticalEnd,
   Home,
+  LifeBuoy,
   Link,
   Map,
   PieChart,
+  Send,
   Rocket,
   Settings2,
   SquareTerminal,
+  Trophy,
+  LandPlot,
+  Volleyball,
 } from "lucide-react"
-
+import { NflIcon } from "@/components/icons/nfl-icon"
 import { NavMain } from "@/components/nav-main"
 import { usePathname } from "next/navigation"
 import { NavProjects } from "@/components/nav-projects"
 import { NavUser } from "@/components/nav-user"
 import { TeamSwitcher } from "@/components/team-switcher"
-
+import { NavSecondary } from "@/components/nav-secondary"
 import {
   Sidebar,
   SidebarContent,
@@ -43,13 +48,13 @@ import {
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "Carter Tyra",
+    email: "carter@aintelligentoddz.com",
     avatar: "/avatars/shadcn.jpg",
   },
   teams: [
     {
-      name: "Acme Inc",
+      name: "AIntelligent Oddz",
       logo: GalleryVerticalEnd,
       plan: "Enterprise",
     },
@@ -68,25 +73,29 @@ const data = {
   navMain: [
     {
       title: "Sports",
-      url: "#",
-      icon: SquareTerminal,
+      url: "/dashboard/sports",
+      icon: Trophy,
       isActive: true,
       items: [
         {
           title: "NFL",
           url: "/dashboard/sports/nfl",
+          icon: NflIcon,
         },
         {
           title: "NBA",
           url: "/dashboard/sports/nba",
+          icon: Volleyball,
         },
         {
           title: "College Football",
           url: "/dashboard/sports/college-football",
+          icon: Volleyball,
         },
         {
           title: "PGA",
           url: "/dashboard/sports/pga",
+          icon: Volleyball,
         },
       ],
     },
@@ -173,6 +182,18 @@ const data = {
       icon: Map,
     },
   ],
+  navSecondary: [
+    {
+      title: "Support",
+      url: "#",
+      icon: LifeBuoy,
+    },
+    {
+      title: "Feedback",
+      url: "#",
+      icon: Send,
+    },
+  ],
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -183,10 +204,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
       <SidebarContent>
-      <SidebarMenu>
+      {/* <SidebarMenu>
           {menuItems.map((item) => (
             <SidebarMenuItem key={item.name}>
-              <Link href={item.href}>
                 <SidebarMenuButton
                   isActive={pathname === item.href}
                   className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors ${
@@ -199,12 +219,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <span>{item.name}</span>
                   {pathname === item.href && <ChevronRight className="ml-auto h-4 w-4" />}
                 </SidebarMenuButton>
-              </Link>
+             
             </SidebarMenuItem>
           ))}
-        </SidebarMenu>  
+        </SidebarMenu>   */}
         <NavMain items={data.navMain} />
         <NavProjects projects={data.projects} />
+        <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />

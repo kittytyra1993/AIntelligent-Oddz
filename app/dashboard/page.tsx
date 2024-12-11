@@ -4,18 +4,8 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Trophy, TrendingUp, DollarSign, Search, Bell, User, Calendar, ArrowUp, ArrowDown, Activity, Clock } from 'lucide-react'
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarProvider,
-} from "@/components/ui/sidebar"
+import {Calendar, ArrowUp, ArrowDown, Clock } from 'lucide-react'
+
 import { Bar, BarChart, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
 
 const revenueData = [
@@ -89,7 +79,7 @@ export default function DashboardPage() {
                   <CardContent>
                     <div className="flex items-baseline gap-2">
                       <span className="text-2xl font-bold">{stat.value}</span>
-                      <Badge variant={stat.trend === 'up' ? 'success' : 'destructive'} className="flex items-center gap-1">
+                      <Badge variant={stat.trend === 'up' ? 'default' : 'destructive'} className="flex items-center gap-1">
                         {stat.trend === 'up' ? <ArrowUp className="h-3 w-3" /> : <ArrowDown className="h-3 w-3" />}
                         {stat.change}
                       </Badge>
