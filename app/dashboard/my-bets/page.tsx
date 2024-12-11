@@ -96,7 +96,7 @@ export default function MyBetsPage() {
   const [sortBy, setSortBy] = useState("Event Time")
 
   return (
-    <div className="flex min-h-screen flex-col bg-black">
+    <div className="flex min-h-screen flex-col bg-black w-full">
       {/* Gradient backgrounds */}
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(0,255,127,0.15),transparent_50%)]" />
       <div className="fixed inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />

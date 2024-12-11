@@ -1,2 +1,1 @@
-// Implement utility functions
 

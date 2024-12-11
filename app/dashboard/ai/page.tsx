@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Flame, TrendingUp, Trophy, Brain, Calculator, BookOpen, ChevronRight, ClubIcon as Football, GuitarIcon as Golf, ShoppingBasketIcon as Basketball, BeerIcon as Baseball, HopIcon as Hockey, Gamepad2, ArrowUpRight, BirdIcon as Avatar, BirdIcon as Avatar, BirdIcon as Avatar } from 'lucide-react'
+import { Flame, TrendingUp, Trophy, Brain, Calculator, BookOpen, ChevronRight, ClubIcon as Football, GuitarIcon as Golf, ShoppingBasketIcon as Basketball, BeerIcon as Baseball, HopIcon as Hockey, Gamepad2, ArrowUpRight } from 'lucide-react'
 
 interface NewsArticle {
   date: string

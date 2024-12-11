@@ -1,6 +1,5 @@
 import { SidebarProvider } from "@/components/ui/sidebar"
-import { DashboardShell } from "@/components/dashboard-shell"
-
+import { AppSidebar } from "@/components/app-sidebar"
 export default function DashboardLayout({
   children,
 }: {
@@ -8,9 +7,11 @@ export default function DashboardLayout({
 }) {
   return (
     <SidebarProvider>
+       <AppSidebar />
       <div className="flex min-h-screen flex-col bg-black">
       {children}
       </div>
+   
     </SidebarProvider>
   )
 }
